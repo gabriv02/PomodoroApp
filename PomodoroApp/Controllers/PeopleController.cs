@@ -25,14 +25,14 @@ namespace PomodoroApp.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Person>>> GetPeople()
         {
-            return await _context.People.ToListAsync();
+            return await _context.Person1.ToListAsync();
         }
 
         // GET: api/People/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Person>> GetPerson(int id)
         {
-            var person = await _context.People.FindAsync(id);
+            var person = await _context.Person1.FindAsync(id);
 
             if (person == null)
             {
@@ -41,7 +41,7 @@ namespace PomodoroApp.Controllers
 
             return person;
         }
-
+        
         // PUT: api/People/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
@@ -78,7 +78,7 @@ namespace PomodoroApp.Controllers
         [HttpPost]
         public async Task<ActionResult<Person>> PostPerson(Person person)
         {
-            _context.People.Add(person);
+            _context.Person1.Add(person);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetPerson", new { id = person.PersonId }, person);
@@ -88,13 +88,13 @@ namespace PomodoroApp.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeletePerson(int id)
         {
-            var person = await _context.People.FindAsync(id);
+            var person = await _context.Person1.FindAsync(id);
             if (person == null)
             {
                 return NotFound();
             }
 
-            _context.People.Remove(person);
+            _context.Person1.Remove(person);
             await _context.SaveChangesAsync();
 
             return NoContent();
@@ -102,7 +102,7 @@ namespace PomodoroApp.Controllers
 
         private bool PersonExists(int id)
         {
-            return _context.People.Any(e => e.PersonId == id);
+            return _context.Person1.Any(e => e.PersonId == id);
         }
     }
 }

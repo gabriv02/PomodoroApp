@@ -40,7 +40,7 @@ namespace PomodoroApp.Migrations
 
                     b.HasKey("PersonId");
 
-                    b.ToTable("People");
+                    b.ToTable("Person1");
                 });
 #pragma warning restore 612, 618
         }

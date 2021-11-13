@@ -10,8 +10,8 @@ using PomodoroApp.Data;
 namespace PomodoroApp.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20211111230345_AddPerson")]
-    partial class AddPerson
+    [Migration("20211112123746_AddModel")]
+    partial class AddModel
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -42,7 +42,7 @@ namespace PomodoroApp.Migrations
 
                     b.HasKey("PersonId");
 
-                    b.ToTable("People");
+                    b.ToTable("Person1");
                 });
 #pragma warning restore 612, 618
         }

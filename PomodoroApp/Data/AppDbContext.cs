@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
-
+    
 namespace PomodoroApp.Data
 {
     public class AppDbContext : DbContext
@@ -13,6 +13,7 @@ namespace PomodoroApp.Data
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
         }
-        public DbSet<Person> People { get; set; }
+
+        public DbSet<Person> Person1 { get; set; }
     }
 }
