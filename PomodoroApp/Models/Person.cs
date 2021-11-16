@@ -21,9 +21,6 @@ namespace PomodoroApp.Models
         [Display(Name = "Tarea")]
         public string Tarea { get; set; }
 
-        [Required]
-        public DateTime Fecha { get; set; }
-
        
     }
 }
