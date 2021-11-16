@@ -21,6 +21,5 @@ namespace PomodoroApp.Models
         [Display(Name = "Tarea")]
         public string Tarea { get; set; }
 
-       
     }
 }

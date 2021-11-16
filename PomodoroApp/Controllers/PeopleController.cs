@@ -23,7 +23,7 @@ namespace PomodoroApp.Controllers
 
         // GET: api/People
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Person>>> GetPeople()
+        public async Task<ActionResult<IEnumerable<Person>>> GetPerson1()
         {
             return await _context.Person1.ToListAsync();
         }
@@ -41,7 +41,7 @@ namespace PomodoroApp.Controllers
 
             return person;
         }
-        
+
         // PUT: api/People/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
